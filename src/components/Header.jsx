@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import getWidth from '../helpers/getWidth'
+import { getWidth, getUrlImage } from '../helpers/getWidth'
 
 const Wrapper = styled.header`
   position: relative;
@@ -15,15 +15,11 @@ const Wrapper = styled.header`
 
   padding: 35px 20px;
 
-  background-image: url(${props => props.url});
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-positon: center;
+  background: url(${props => props.url}) no-repeat center center/cover;
 
+  grid-column: 1 / -1;
   @media (width > 720px){
-    grid-column: 1 / -1;
     height: 650px;
-    background-size: cover;
 
     grid-template-columns: repeat(12, 1fr);
   }
@@ -55,7 +51,7 @@ const MenuMobile = styled.div`
   z-index: 1000;
 `
 
-const Title = styled.h1`
+const Title = styled.div`
   grid-column: 2;
   padding: 25px 20px;
   border: 2px solid var(--color-white);
@@ -80,7 +76,7 @@ const Header = () => {
   const toggleMenu = () => setMenuOpened(!menuOpened)
 
   return (
-    <Wrapper url={`/${getWidth() < 720 ? 'mobile' : 'desktop'}/image-hero.webp`}>
+    <Wrapper url={getUrlImage('image-hero')}>
       <Navegation className='flex justify-between align-center gap-4'>
         <Img src='/logo.svg' alt='' />
         { getWidth() < 720 ? 

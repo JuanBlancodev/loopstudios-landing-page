@@ -6,7 +6,9 @@
   --font-family-secondary: "Josefin Sans", sans-serif;
 
   --font-weight-regular: 300;
-  --font-weight-sembold: 400;
+  --font-weight-medium: 330;
+  --font-weight-semibold: 400;
+  --font-weight-bold: 500;
 
   --color-white: hsl(0, 0%, 100%);
   --color-black: hsl(0, 0%, 0%);
@@ -16,8 +18,8 @@
   --font-size-small: 15px;
   --font-size-medium: 17px;
   --font-size-large: 20px;
-  --font-size-xl: 25px;
-  --font-size-xxl: 30px;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.5rem;
 
   --spacing-1: 1rem;
   --spacing-2: 2rem;
@@ -59,8 +61,16 @@ p{
   font-weight: var(--font-weight-regular);
 }
 
+.fw-medium{
+  font-weight: var(--font-weight-medium);
+}
+
 .fw-semibold{
-  font-weight: var(--font-weight-sembold);
+  font-weight: var(--font-weight-semibold);
+}
+
+.fw-bold{
+  font-weight: var(--font-weight-bold);
 }
 
 /* Font Size */
@@ -102,6 +112,11 @@ p{
   color: var(--color-very-dark-gray);
 }
 
+/* Position */
+.relative{
+  position: relative;
+}
+
 /* Display */
 .flex{
   display: flex;
@@ -137,6 +152,10 @@ p{
 
 .uppercase{
   text-transform: uppercase;
+}
+
+.center{
+  text-align: center;
 }
 
 /* Width */
