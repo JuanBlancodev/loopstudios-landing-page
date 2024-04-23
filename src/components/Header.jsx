@@ -8,6 +8,10 @@ const Wrapper = styled.header`
   position: relative;
   with: 100%;
   height: 800px;
+  
+  display: grid;
+  align-content: start;
+  row-gap: 150px;
 
   padding: 35px 20px;
 
@@ -21,8 +25,6 @@ const Wrapper = styled.header`
     height: 600px;
     background-size: cover;
 
-    display: grid;
-    align-content: start;
     grid-template-columns: repeat(12, 1fr);
   }
 `
@@ -53,6 +55,21 @@ const MenuMobile = styled.div`
   z-index: 1000;
 `
 
+const Title = styled.h1`
+  grid-column: 2;
+  padding: 25px 20px;
+  border: 2px solid var(--color-white);
+
+  font-size: 1.3rem;
+
+  @media (width > 720px){
+    width: 650px;
+    font-size: 2rem;
+
+    padding: 25px 30px;
+  }
+`
+
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false)
 
@@ -64,7 +81,7 @@ const Header = () => {
 
   return (
     <Wrapper url={`/${getWidth() < 720 ? 'mobile' : 'desktop'}/image-hero.webp`}>
-      <Navegation className='flex justify-between align-center'>
+      <Navegation className='flex justify-between align-center gap-4'>
         <Img src='/logo.svg' alt='' />
         { getWidth() < 720 ? 
           <FontAwesomeIcon icon={faBars} className='icon' onClick={toggleMenu} /> : (
@@ -112,6 +129,12 @@ const Header = () => {
           </ul>
         </MenuMobile> }
       </Navegation>
+
+      <Title>
+        <h1 className='uppercase ff-secondary fw-regular white'>
+          Immersive experiences that deliver
+        </h1>
+      </Title>
     </Wrapper>
   )
 }
