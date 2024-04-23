@@ -22,7 +22,7 @@ const Wrapper = styled.header`
 
   @media (width > 720px){
     grid-column: 1 / -1;
-    height: 600px;
+    height: 650px;
     background-size: cover;
 
     grid-template-columns: repeat(12, 1fr);
