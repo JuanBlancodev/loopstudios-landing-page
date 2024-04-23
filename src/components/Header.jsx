@@ -83,24 +83,24 @@ const Header = () => {
           <FontAwesomeIcon icon={faBars} className='icon' onClick={toggleMenu} /> : (
           <Menu>
             <li>
-              <a href='#' className='white ff-primary fs-medium decoration-none link'>About</a>
+              <a href='#' className='white ff-secondary fs-medium decoration-none link'>About</a>
             </li>
             <li>
-              <a href='#' className='white ff-primary fs-medium decoration-none link'>Carrers</a>
+              <a href='#' className='white ff-secondary fs-medium decoration-none link'>Carrers</a>
             </li>
             <li>
-              <a href='#' className='white ff-primary fs-medium decoration-none link'>Events</a>
+              <a href='#' className='white ff-secondary fs-medium decoration-none link'>Events</a>
             </li>
             <li>
-              <a href='#' className='white ff-primary fs-medium decoration-none link'>Products</a>
+              <a href='#' className='white ff-secondary fs-medium decoration-none link'>Products</a>
             </li>
             <li>
-              <a href='#' className='white ff-primary fs-medium decoration-none link'>Support</a>
+              <a href='#' className='white ff-secondary fs-medium decoration-none link'>Support</a>
             </li>
           </Menu>
         ) }
 
-        { menuOpened && <MenuMobile className='flex flex-column gap-10 align-start'>
+        { menuOpened && <MenuMobile className='flex flex-column gap-7 align-start'>
           <div className='w-full flex align-center justify-between'>
             <Img src='/logo.svg' />
             <FontAwesomeIcon icon={faXmark} className='icon'  onClick={toggleMenu} />
@@ -108,26 +108,26 @@ const Header = () => {
 
           <ul className='flex flex-column gap-2'>
             <li>
-              <a href="#" className='dark-gray ff-secondary fw-regular fs-xxl decoration-none uppercase link'>About</a>
+              <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>About</a>
             </li>
             <li>
-              <a href="#" className='dark-gray ff-secondary fw-regular fs-xxl decoration-none uppercase link'>Carrers</a>
+              <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>Carrers</a>
             </li>
             <li>
-              <a href="#" className='dark-gray ff-secondary fw-regular fs-xxl decoration-none uppercase link'>Events</a>
+              <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>Events</a>
             </li>
             <li>
-              <a href="#" className='dark-gray ff-secondary fw-regular fs-xxl decoration-none uppercase link'>Products</a>
+              <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>Products</a>
             </li>
             <li>
-              <a href="#" className='dark-gray ff-secondary fw-regular fs-xxl decoration-none uppercase link'>Support</a>
+              <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>Support</a>
             </li>
           </ul>
         </MenuMobile> }
       </Navegation>
 
       <Title>
-        <h1 className='uppercase ff-secondary fw-regular white'>
+        <h1 className='uppercase ff-primary fw-regular white'>
           Immersive experiences that deliver
         </h1>
       </Title>

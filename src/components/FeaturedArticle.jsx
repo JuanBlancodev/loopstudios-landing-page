@@ -53,7 +53,7 @@ const FeaturedArticle = () => {
     <Wrapper className='relative flex flex-column align-center'>
       <ImageContainer image={getUrlImage('image-interactive')} />
       <InfoContainer className="flex flex-column gap-2">
-        <h2 className='black ff-secondary fw-regular fs-xl uppercase'>The leader in interactive VR</h2>
+        <h2 className='black ff-primary fw-regular fs-xl uppercase'>The leader in interactive VR</h2>
         <p className='dark-gray ff-primary fw-bold fs-small'>
           Founded in 2011, Loopstudios has been producing world-class virtual reality 
           projects for some of the best companies around the globe. Our award-winning 

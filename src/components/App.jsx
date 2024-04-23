@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Header from './Header'
 import FeaturedArticle from './FeaturedArticle'
+import Creations from './Creations'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -19,8 +20,9 @@ const App = () => {
   return (
     <Wrapper>
       <Header />
-      <Content>
+      <Content className='flex flex-column gap-6'>
         <FeaturedArticle />
+        <Creations />
       </Content>
     </Wrapper>
   )
