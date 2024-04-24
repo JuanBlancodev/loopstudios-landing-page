@@ -1,4 +1,4 @@
-# Frontend Mentor - Social links profile solution
+# Frontend Mentor - Loopstudios landing page solution
 
 This is a solution to the [Loopstudios landing page](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw/hub). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
