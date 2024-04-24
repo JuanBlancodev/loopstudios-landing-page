@@ -81,19 +81,19 @@ const Header = () => {
           <FontAwesomeIcon icon={faBars} className='icon' onClick={toggleMenu} /> : (
           <Menu className='list-none'>
             <li>
-              <a href='#' className='white ff-secondary fs-medium decoration-none link'>About</a>
+              <a href='#' className='link'>About</a>
             </li>
             <li>
-              <a href='#' className='white ff-secondary fs-medium decoration-none link'>Carrers</a>
+              <a href='#' className='link'>Carrers</a>
             </li>
             <li>
-              <a href='#' className='white ff-secondary fs-medium decoration-none link'>Events</a>
+              <a href='#' className='link'>Events</a>
             </li>
             <li>
-              <a href='#' className='white ff-secondary fs-medium decoration-none link'>Products</a>
+              <a href='#' className='link'>Products</a>
             </li>
             <li>
-              <a href='#' className='white ff-secondary fs-medium decoration-none link'>Support</a>
+              <a href='#' className='link'>Support</a>
             </li>
           </Menu>
         ) }
@@ -106,19 +106,19 @@ const Header = () => {
 
           <ul className='flex flex-column gap-2 list-none'>
             <li>
-              <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>About</a>
+              <a href="#" className='uppercase link mobile'>About</a>
             </li>
             <li>
-              <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>Carrers</a>
+              <a href="#" className='uppercase link mobile'>Carrers</a>
             </li>
             <li>
-              <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>Events</a>
+              <a href="#" className='uppercase link mobile'>Events</a>
             </li>
             <li>
-              <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>Products</a>
+              <a href="#" className='uppercase link mobile'>Products</a>
             </li>
             <li>
-              <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>Support</a>
+              <a href="#" className='uppercase link mobile'>Support</a>
             </li>
           </ul>
         </MenuMobile> }

@@ -7,6 +7,10 @@ const Wrapper = styled.article`
   @media (width > 720px){
     flex-direction: row;
   }
+
+  @media (width > 1024px){
+    width: 950px;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -43,7 +47,6 @@ const InfoContainer = styled.div`
   }
 
   @media (width > 1200px){
-    right: 150px;
     bottom: 50px;
   }
 `
