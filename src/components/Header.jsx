@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { getWidth, getUrlImage } from '../helpers/getWidth'
 
 import Brand from './Brand'
+import Link from './Link'
 
 const Wrapper = styled.header`
   position: relative;
@@ -32,7 +33,6 @@ const Navegation = styled.nav`
 `
 
 const Menu = styled.ul`
-  list-style: none;
 
   display: flex;
   gap: 30px;
@@ -67,7 +67,7 @@ const Title = styled.div`
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false)
 
-  if(getWidth > 720 && menuOpened){
+  if(getWidth() > 720 && menuOpened){
     setMenuOpened(false)
   }
 
@@ -80,21 +80,11 @@ const Header = () => {
         { getWidth() < 720 ? 
           <FontAwesomeIcon icon={faBars} className='icon' onClick={toggleMenu} /> : (
           <Menu className='list-none'>
-            <li>
-              <a href='#about' className='link'>About</a>
-            </li>
-            <li>
-              <a href='#careers' className='link'>Careers</a>
-            </li>
-            <li>
-              <a href='#events' className='link'>Events</a>
-            </li>
-            <li>
-              <a href='#products' className='link'>Products</a>
-            </li>
-            <li>
-              <a href='#support' className='link'>Support</a>
-            </li>
+            <Link to="About" />
+            <Link to="Careers" />
+            <Link to="Events" />
+            <Link to="Products" />
+            <Link to="Support" />
           </Menu>
         ) }
 
@@ -105,21 +95,11 @@ const Header = () => {
           </div>
 
           <ul className='flex flex-column gap-2 list-none'>
-            <li>
-              <a href="#about" className='uppercase link mobile'>About</a>
-            </li>
-            <li>
-              <a href="#careers" className='uppercase link mobile'>Careers</a>
-            </li>
-            <li>
-              <a href="#events" className='uppercase link mobile'>Events</a>
-            </li>
-            <li>
-              <a href="#products" className='uppercase link mobile'>Products</a>
-            </li>
-            <li>
-              <a href="#support" className='uppercase link mobile'>Support</a>
-            </li>
+            <Link to="About" mobile />
+            <Link to="Careers" mobile />
+            <Link to="Events" mobile />
+            <Link to="Products" mobile />
+            <Link to="Support" mobile />
           </ul>
         </MenuMobile> }
       </Navegation>

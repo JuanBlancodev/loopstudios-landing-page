@@ -803,7 +803,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   padding: 35px 20px;
 
-  background: url(${e=>e.url}) no-repeat center center/cover;
+  background: url(${e=>e.image}) no-repeat center center/cover;
 
   grid-column: 1 / -1;
   @media (width > 720px){
@@ -840,7 +840,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
     padding: 25px 30px;
   }
-`,zg=()=>{const[e,n]=An.useState(!1);ba>720&&e&&n(!1);const t=()=>n(!e);return O.jsxs(Eg,{url:Fs("image-hero"),children:[O.jsxs(Ng,{className:"flex justify-between align-center gap-4",children:[O.jsx(Ru,{}),ba()<720?O.jsx(kn,{icon:jh,className:"icon",onClick:t}):O.jsxs(Pg,{className:"list-none",children:[O.jsx("li",{children:O.jsx("a",{href:"#",className:"link",children:"About"})}),O.jsx("li",{children:O.jsx("a",{href:"#",className:"link",children:"Carrers"})}),O.jsx("li",{children:O.jsx("a",{href:"#",className:"link",children:"Events"})}),O.jsx("li",{children:O.jsx("a",{href:"#",className:"link",children:"Products"})}),O.jsx("li",{children:O.jsx("a",{href:"#",className:"link",children:"Support"})})]}),e&&O.jsxs(_g,{className:"flex flex-column gap-7 align-start",children:[O.jsxs("div",{className:"w-full flex align-center justify-between",children:[O.jsx(Ru,{}),O.jsx(kn,{icon:Th,className:"icon",onClick:t})]}),O.jsxs("ul",{className:"flex flex-column gap-2 list-none",children:[O.jsx("li",{children:O.jsx("a",{href:"#",className:"uppercase link mobile",children:"About"})}),O.jsx("li",{children:O.jsx("a",{href:"#",className:"uppercase link mobile",children:"Carrers"})}),O.jsx("li",{children:O.jsx("a",{href:"#",className:"uppercase link mobile",children:"Events"})}),O.jsx("li",{children:O.jsx("a",{href:"#",className:"uppercase link mobile",children:"Products"})}),O.jsx("li",{children:O.jsx("a",{href:"#",className:"uppercase link mobile",children:"Support"})})]})]})]}),O.jsx(Og,{children:O.jsx("h1",{className:"uppercase ff-primary fw-regular white",children:"Immersive experiences that deliver"})})]})},jg=ge.article`
+`,zg=()=>{const[e,n]=An.useState(!1);ba>720&&e&&n(!1);const t=()=>n(!e);return O.jsxs(Eg,{image:Fs("image-hero"),children:[O.jsxs(Ng,{className:"flex justify-between align-center gap-4",children:[O.jsx(Ru,{}),ba()<720?O.jsx(kn,{icon:jh,className:"icon",onClick:t}):O.jsxs(Pg,{className:"list-none",children:[O.jsx("li",{children:O.jsx("a",{href:"#about",className:"link",children:"About"})}),O.jsx("li",{children:O.jsx("a",{href:"#careers",className:"link",children:"Careers"})}),O.jsx("li",{children:O.jsx("a",{href:"#events",className:"link",children:"Events"})}),O.jsx("li",{children:O.jsx("a",{href:"#products",className:"link",children:"Products"})}),O.jsx("li",{children:O.jsx("a",{href:"#support",className:"link",children:"Support"})})]}),e&&O.jsxs(_g,{className:"flex flex-column gap-7 align-start",children:[O.jsxs("div",{className:"w-full flex align-center justify-between",children:[O.jsx(Ru,{}),O.jsx(kn,{icon:Th,className:"icon",onClick:t})]}),O.jsxs("ul",{className:"flex flex-column gap-2 list-none",children:[O.jsx("li",{children:O.jsx("a",{href:"#about",className:"uppercase link mobile",children:"About"})}),O.jsx("li",{children:O.jsx("a",{href:"#careers",className:"uppercase link mobile",children:"Careers"})}),O.jsx("li",{children:O.jsx("a",{href:"#events",className:"uppercase link mobile",children:"Events"})}),O.jsx("li",{children:O.jsx("a",{href:"#products",className:"uppercase link mobile",children:"Products"})}),O.jsx("li",{children:O.jsx("a",{href:"#support",className:"uppercase link mobile",children:"Support"})})]})]})]}),O.jsx(Og,{children:O.jsx("h1",{className:"uppercase ff-primary fw-regular white",children:"Immersive experiences that deliver"})})]})},jg=ge.article`
   height: 500px;
 
   @media (width > 720px){
@@ -1079,7 +1079,7 @@ Valid keys: `+JSON.stringify(Object.keys(b),null,"  "));var z=le(L,U,P,T,R+"."+U
   bottom: 10px;
 
   transition: color 0.3s;
-`,Zm=({title:e,image:n,link:t})=>{const[r,a]=An.useState(!1);return O.jsxs(Dg,{href:t,className:"relative decoration-none flex align-center",children:[O.jsx(Fg,{src:Fs(n),alt:e,onLoad:()=>a(!0)}),r?O.jsx(Vg,{className:"white uppercase ff-primary fw-medium fs-large",children:e}):O.jsx(Lg,{color:"var(--color-dark-gray)",width:40,height:40,className:"m-auto",type:"bars"})]})};Zm.propTypes={title:W.string.isRequired,image:W.string.isRequired,link:W.string.isRequired};const $g=ge.header`
+`,Zm=({title:e,image:n,link:t})=>{const[r,a]=An.useState(!1);return O.jsxs(Dg,{href:t,className:"relative decoration-none flex align-center",children:[O.jsx(Fg,{src:Fs(n),alt:e.toLowerCase().replace(" ","-"),onLoad:()=>a(!0)}),r?O.jsx(Vg,{className:"white uppercase ff-primary fw-medium fs-large",children:e}):O.jsx(Lg,{color:"var(--color-dark-gray)",width:40,height:40,className:"m-auto",type:"bars"})]})};Zm.propTypes={title:W.string.isRequired,image:W.string.isRequired,link:W.string.isRequired};const $g=ge.header`
   @media (width > 720px){
     display: flex;
     align-items: center;
@@ -1106,7 +1106,7 @@ Valid keys: `+JSON.stringify(Object.keys(b),null,"  "));var z=le(L,U,P,T,R+"."+U
     justify-content: space-between;
     padding: 20px 100px;
   }
-`,Kg=ge.section`
+`,Kg=ge.div`
   @media (width > 940px){
     gap: 20px;
   }
@@ -1122,7 +1122,7 @@ Valid keys: `+JSON.stringify(Object.keys(b),null,"  "));var z=le(L,U,P,T,R+"."+U
       font-size: 2px;
     }
   }
-`,Zg=()=>O.jsxs(Gg,{className:"flex gap-2",children:[O.jsxs(Kg,{className:"flex flex-column gap-2",children:[O.jsx(Ru,{className:"justify-self-start"}),O.jsxs(Xg,{className:"flex align-center gap-1 list-none ff-secondary fs-large",children:[O.jsx("li",{children:O.jsx("a",{href:"#about",className:"link",children:"About"})}),O.jsx("li",{children:O.jsx("a",{href:"#careers",className:"link",children:"Careers"})}),O.jsx("li",{children:O.jsx("a",{href:"#events",className:"link",children:"Events"})}),O.jsx("li",{children:O.jsx("a",{href:"#products",className:"link",children:"Products"})}),O.jsx("li",{children:O.jsx("a",{href:"#support",className:"link",children:"Support"})})]})]}),O.jsxs("section",{className:"flex flex-column align-center gap-1",children:[O.jsxs(Jg,{className:"flex gap-1 align-center",children:[O.jsx("a",{href:"#",children:O.jsx(kn,{icon:Yg,className:"icon"})}),O.jsx("a",{href:"#",children:O.jsx(kn,{icon:Qg,className:"icon"})}),O.jsx("a",{href:"#",children:O.jsx(kn,{icon:qg,className:"icon"})}),O.jsx("a",{href:"#",children:O.jsx(kn,{icon:Wg,className:"icon"})})]}),O.jsx("p",{className:"dark-gray ff-secondary fs-small nowrap",children:"© 2021 Loopstudios. All rights reserved."})]})]}),ev=ge.div`
+`,Zg=()=>O.jsxs(Gg,{className:"flex gap-2",children:[O.jsxs(Kg,{className:"flex flex-column gap-2",children:[O.jsx(Ru,{className:"justify-self-start"}),O.jsxs(Xg,{className:"flex align-center gap-1 list-none ff-secondary fs-large",children:[O.jsx("li",{children:O.jsx("a",{href:"#about",className:"link",children:"About"})}),O.jsx("li",{children:O.jsx("a",{href:"#careers",className:"link",children:"Careers"})}),O.jsx("li",{children:O.jsx("a",{href:"#events",className:"link",children:"Events"})}),O.jsx("li",{children:O.jsx("a",{href:"#products",className:"link",children:"Products"})}),O.jsx("li",{children:O.jsx("a",{href:"#support",className:"link",children:"Support"})})]})]}),O.jsxs("div",{className:"flex flex-column align-center gap-1",children:[O.jsxs(Jg,{className:"flex gap-1 align-center",children:[O.jsx("a",{href:"#facebook",children:O.jsx(kn,{icon:Yg,className:"icon"})}),O.jsx("a",{href:"#twitter",children:O.jsx(kn,{icon:Qg,className:"icon"})}),O.jsx("a",{href:"#pinterest",children:O.jsx(kn,{icon:qg,className:"icon"})}),O.jsx("a",{href:"#instagram",children:O.jsx(kn,{icon:Wg,className:"icon"})})]}),O.jsx("p",{className:"dark-gray ff-secondary fs-small nowrap",children:"© 2021 Loopstudios. All rights reserved."})]})]}),ev=ge.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 `,nv=ge.main`

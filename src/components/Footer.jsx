@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTwitter, faPinterest, faInstagram } from '@fortawesome/free-brands-svg-icons'
+
 import Brand from './Brand'
+import Link from './Link'
 
 const Wrapper = styled.footer`
   grid-column: 1 / -1;
@@ -49,21 +51,11 @@ const Footer = () => {
       <Principal className='flex flex-column gap-2'>
         <Brand className='justify-self-start' />
         <Menu className='flex align-center gap-1 list-none ff-secondary fs-large'>
-          <li>
-            <a href="#about" className='link'>About</a>
-          </li>
-          <li>
-            <a href="#careers" className='link'>Careers</a>
-          </li>
-          <li>
-            <a href="#events" className='link'>Events</a>
-          </li>
-          <li>
-            <a href="#products" className='link'>Products</a>
-          </li>
-          <li>
-            <a href="#support" className='link'>Support</a>
-          </li>
+          <Link to="About" />
+            <Link to="Careers" />
+            <Link to="Events" />
+            <Link to="Products" />
+            <Link to="Support" />
         </Menu>
       </Principal>
       <div className='flex flex-column align-center gap-1'>
