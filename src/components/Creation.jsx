@@ -1,12 +1,13 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { getUrlImage } from '../helpers/getWidth'
+import ReactLoading from 'react-loading'
 
 const Wrapper = styled.a`
-  position: relative;
   width: 100%;
   height: 100px;
-  background: url(${props => props.image}) no-repeat center center/cover;
+  overflow: hidden;
 
   &::before{
     content: "";
@@ -34,6 +35,12 @@ const Wrapper = styled.a`
   }
 `
 
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`
+
 const Title = styled.h3`
   width: 120px;
   position: absolute;
@@ -44,9 +51,18 @@ const Title = styled.h3`
 `
 
 const Creation = ({ title, image, link }) => {
+  const [imgLoaded, setImgLoaded] = useState(false)
+
   return (
-    <Wrapper image={getUrlImage(image)} href={link} className='decoration-none'>
-      <Title className='white uppercase ff-primary fw-medium fs-large'>{ title }</Title>
+    <Wrapper href={link} className='relative decoration-none flex align-center'>
+      <Img src={getUrlImage(image)} alt={title} onLoad={() => setImgLoaded(true)} />
+      { !imgLoaded ? <ReactLoading 
+          color='var(--color-dark-gray)' 
+          width={40} height={40} 
+          className='m-auto' 
+          type='bars'
+        /> : <Title className='white uppercase ff-primary fw-medium fs-large'>{ title }</Title>
+      }
     </Wrapper>
   )
 }

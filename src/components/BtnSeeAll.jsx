@@ -5,6 +5,7 @@ const Button = styled.a`
   padding: 10px 15px;
   border: 1px solid var(--color-black);
   letter-spacing: 3px;
+  transition: background-color 0.25s, color 0.25s;
 
   &:hover{
     background-color: black;

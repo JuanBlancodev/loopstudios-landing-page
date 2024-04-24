@@ -204,6 +204,11 @@ p{
   gap: var(--spacing-10);
 }
 
+/* Margin */
+.m-auto{
+  margin: auto;
+}
+
 /* Other */
 .link{
   position: relative;
