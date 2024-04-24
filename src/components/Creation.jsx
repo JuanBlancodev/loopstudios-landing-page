@@ -28,6 +28,10 @@ const Wrapper = styled.a`
       color: black;
     }
   }
+
+  @media (width > 720px){
+    height: 500px;
+  }
 `
 
 const Title = styled.h3`

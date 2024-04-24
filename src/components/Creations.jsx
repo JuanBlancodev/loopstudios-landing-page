@@ -3,10 +3,6 @@ import { getWidth } from '../helpers/getWidth'
 import BtnSeeAll from './BtnSeeAll'
 import Creation from './Creation'
 
-const Wrapper = styled.article`
-
-`
-
 const Header = styled.header`
   @media (width > 720px){
     display: flex;
@@ -16,6 +12,10 @@ const Header = styled.header`
 `
 
 const Content = styled.div`
+  @media (width > 720px){
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 `
 
 const creationsList = [
@@ -71,7 +71,7 @@ const creationsList = [
 
 const Creations = () => {
   return (
-    <Wrapper className='flex flex-column justify-center gap-5'>
+    <article className='flex flex-column gap-2'>
       <Header>
         <h2 className='uppercase ff-primary fw-medium fs-xl center'>Our creations</h2>
         { getWidth() > 720 && <BtnSeeAll /> }
@@ -87,7 +87,10 @@ const Creations = () => {
           />
         )) }
       </Content>
-    </Wrapper>
+      { getWidth() < 720 && <div className='flex justify-center'>
+        <BtnSeeAll />
+      </div> }
+    </article>
   )
 }
 
