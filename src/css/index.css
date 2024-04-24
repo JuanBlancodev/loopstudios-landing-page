@@ -158,6 +158,10 @@ p{
   text-align: center;
 }
 
+.nowrap{
+  text-wrap: nowrap;
+}
+
 /* Width */
 .w-full{
   width: 100%;
@@ -212,6 +216,8 @@ p{
 /* Other */
 .link{
   position: relative;
+  text-decoration: none;
+  color: var(--color-white);
 }
 
 .link::before,
@@ -242,4 +248,8 @@ p{
 .icon{
   color: var(--color-white);
   font-size: 2rem;
+}
+
+.list-none{
+  list-style: none;
 }

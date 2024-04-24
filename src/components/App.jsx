@@ -2,11 +2,9 @@ import styled from 'styled-components'
 import Header from './Header'
 import FeaturedArticle from './FeaturedArticle'
 import Creations from './Creations'
+import Footer from './Footer'
 
 const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 `
@@ -24,6 +22,7 @@ const App = () => {
         <FeaturedArticle />
         <Creations />
       </Content>
+      <Footer />
     </Wrapper>
   )
 }

@@ -4,6 +4,8 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { getWidth, getUrlImage } from '../helpers/getWidth'
 
+import Brand from './Brand'
+
 const Wrapper = styled.header`
   position: relative;
   with: 100%;
@@ -27,10 +29,6 @@ const Wrapper = styled.header`
 
 const Navegation = styled.nav`
   grid-column: 2 / 12;
-`
-
-const Img = styled.img`
-  width: 170px;
 `
 
 const Menu = styled.ul`
@@ -78,10 +76,10 @@ const Header = () => {
   return (
     <Wrapper url={getUrlImage('image-hero')}>
       <Navegation className='flex justify-between align-center gap-4'>
-        <Img src='/logo.svg' alt='' />
+        <Brand />
         { getWidth() < 720 ? 
           <FontAwesomeIcon icon={faBars} className='icon' onClick={toggleMenu} /> : (
-          <Menu>
+          <Menu className='list-none'>
             <li>
               <a href='#' className='white ff-secondary fs-medium decoration-none link'>About</a>
             </li>
@@ -102,11 +100,11 @@ const Header = () => {
 
         { menuOpened && <MenuMobile className='flex flex-column gap-7 align-start'>
           <div className='w-full flex align-center justify-between'>
-            <Img src='/logo.svg' />
+            <Brand />
             <FontAwesomeIcon icon={faXmark} className='icon'  onClick={toggleMenu} />
           </div>
 
-          <ul className='flex flex-column gap-2'>
+          <ul className='flex flex-column gap-2 list-none'>
             <li>
               <a href="#" className='dark-gray ff-primary fw-regular fs-xxl decoration-none uppercase link'>About</a>
             </li>
