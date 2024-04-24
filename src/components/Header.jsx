@@ -81,19 +81,19 @@ const Header = () => {
           <FontAwesomeIcon icon={faBars} className='icon' onClick={toggleMenu} /> : (
           <Menu className='list-none'>
             <li>
-              <a href='#' className='link'>About</a>
+              <a href='#about' className='link'>About</a>
             </li>
             <li>
-              <a href='#' className='link'>Carrers</a>
+              <a href='#careers' className='link'>Careers</a>
             </li>
             <li>
-              <a href='#' className='link'>Events</a>
+              <a href='#events' className='link'>Events</a>
             </li>
             <li>
-              <a href='#' className='link'>Products</a>
+              <a href='#products' className='link'>Products</a>
             </li>
             <li>
-              <a href='#' className='link'>Support</a>
+              <a href='#support' className='link'>Support</a>
             </li>
           </Menu>
         ) }
@@ -106,19 +106,19 @@ const Header = () => {
 
           <ul className='flex flex-column gap-2 list-none'>
             <li>
-              <a href="#" className='uppercase link mobile'>About</a>
+              <a href="#about" className='uppercase link mobile'>About</a>
             </li>
             <li>
-              <a href="#" className='uppercase link mobile'>Carrers</a>
+              <a href="#careers" className='uppercase link mobile'>Careers</a>
             </li>
             <li>
-              <a href="#" className='uppercase link mobile'>Events</a>
+              <a href="#events" className='uppercase link mobile'>Events</a>
             </li>
             <li>
-              <a href="#" className='uppercase link mobile'>Products</a>
+              <a href="#products" className='uppercase link mobile'>Products</a>
             </li>
             <li>
-              <a href="#" className='uppercase link mobile'>Support</a>
+              <a href="#support" className='uppercase link mobile'>Support</a>
             </li>
           </ul>
         </MenuMobile> }

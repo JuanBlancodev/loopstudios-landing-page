@@ -68,16 +68,16 @@ const Footer = () => {
       </Principal>
       <section className='flex flex-column align-center gap-1'>
         <Social className='flex gap-1 align-center'>
-          <a href="#">
+          <a href="#facebook">
             <FontAwesomeIcon icon={faFacebook} className='icon' />
           </a>
-          <a href="#">
+          <a href="#twitter">
             <FontAwesomeIcon icon={faTwitter} className='icon' />
           </a>
-          <a href="#">
+          <a href="#pinterest">
             <FontAwesomeIcon icon={faPinterest} className='icon' />
           </a>
-          <a href="#">
+          <a href="#instagram">
             <FontAwesomeIcon icon={faInstagram} className='icon' />
           </a>
         </Social>
