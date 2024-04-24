@@ -55,7 +55,7 @@ const Creation = ({ title, image, link }) => {
 
   return (
     <Wrapper href={link} className='relative decoration-none flex align-center'>
-      <Img src={getUrlImage(image)} alt={title} onLoad={() => setImgLoaded(true)} />
+      <Img src={getUrlImage(image)} alt={title.toLowerCase().replace(' ', '-')} onLoad={() => setImgLoaded(true)} />
       { !imgLoaded ? <ReactLoading 
           color='var(--color-dark-gray)' 
           width={40} height={40} 
