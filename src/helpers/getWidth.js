@@ -18,6 +18,6 @@ function getWidth() {
   return screenWidth;
 }
 
-const getUrlImage = (image) => `/${getWidth() < 720 ? 'mobile' : 'desktop'}/${image}.webp`
+const getUrlImage = (image) => `../${getWidth() < 720 ? 'mobile' : 'desktop'}/${image}.webp`
 
 export { getWidth, getUrlImage };
