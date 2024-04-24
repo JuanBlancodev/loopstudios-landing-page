@@ -21,7 +21,7 @@ const Wrapper = styled.footer`
   }
 `
 
-const Principal = styled.section`
+const Principal = styled.div`
   @media (width > 940px){
     gap: 20px;
   }
@@ -66,7 +66,7 @@ const Footer = () => {
           </li>
         </Menu>
       </Principal>
-      <section className='flex flex-column align-center gap-1'>
+      <div className='flex flex-column align-center gap-1'>
         <Social className='flex gap-1 align-center'>
           <a href="#facebook">
             <FontAwesomeIcon icon={faFacebook} className='icon' />
@@ -84,7 +84,7 @@ const Footer = () => {
         <p className='dark-gray ff-secondary fs-small nowrap'>
           &copy; 2021 Loopstudios. All rights reserved.
         </p>
-      </section>
+      </div>
     </Wrapper>
   )
 }

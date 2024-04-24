@@ -17,7 +17,7 @@ const Wrapper = styled.header`
 
   padding: 35px 20px;
 
-  background: url(${props => props.url}) no-repeat center center/cover;
+  background: url(${props => props.image}) no-repeat center center/cover;
 
   grid-column: 1 / -1;
   @media (width > 720px){
@@ -74,7 +74,7 @@ const Header = () => {
   const toggleMenu = () => setMenuOpened(!menuOpened)
 
   return (
-    <Wrapper url={getUrlImage('image-hero')}>
+    <Wrapper image={getUrlImage('image-hero')}>
       <Navegation className='flex justify-between align-center gap-4'>
         <Brand />
         { getWidth() < 720 ? 
