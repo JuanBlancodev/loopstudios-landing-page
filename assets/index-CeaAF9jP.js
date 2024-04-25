@@ -803,7 +803,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   padding: 35px 20px;
 
-  background: url(${e=>e.image}) no-repeat center center/cover;
+  background: url(${e=>e["data-image"]}) no-repeat center center/cover;
 
   grid-column: 1 / -1;
   @media (width > 720px){
@@ -839,7 +839,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
     padding: 25px 30px;
   }
-`,jg=()=>{const[e,n]=Rn.useState(!1);wa()>720&&e&&n(!1);const t=()=>n(!e);return j.jsxs(Ng,{image:Vs("image-hero"),children:[j.jsxs(Pg,{className:"flex justify-between align-center gap-4",children:[j.jsx(Iu,{}),wa()<720?j.jsx(xn,{icon:Th,className:"icon",onClick:t}):j.jsxs(_g,{className:"list-none",children:[j.jsx(je,{to:"About"}),j.jsx(je,{to:"Careers"}),j.jsx(je,{to:"Events"}),j.jsx(je,{to:"Products"}),j.jsx(je,{to:"Support"})]}),e&&j.jsxs(Og,{className:"flex flex-column gap-7 align-start",children:[j.jsxs("div",{className:"w-full flex align-center justify-between",children:[j.jsx(Iu,{}),j.jsx(xn,{icon:Mh,className:"icon",onClick:t})]}),j.jsxs("ul",{className:"flex flex-column gap-2 list-none",children:[j.jsx(je,{to:"About",mobile:!0}),j.jsx(je,{to:"Careers",mobile:!0}),j.jsx(je,{to:"Events",mobile:!0}),j.jsx(je,{to:"Products",mobile:!0}),j.jsx(je,{to:"Support",mobile:!0})]})]})]}),j.jsx(zg,{children:j.jsx("h1",{className:"uppercase ff-primary fw-regular white",children:"Immersive experiences that deliver"})})]})},Tg=ge.article`
+`,jg=()=>{const[e,n]=Rn.useState(!1);wa()>720&&e&&n(!1);const t=()=>n(!e);return j.jsxs(Ng,{"data-image":Vs("image-hero"),children:[j.jsxs(Pg,{className:"flex justify-between align-center gap-4",children:[j.jsx(Iu,{}),wa()<720?j.jsx(xn,{icon:Th,className:"icon",onClick:t}):j.jsxs(_g,{className:"list-none",children:[j.jsx(je,{to:"About"}),j.jsx(je,{to:"Careers"}),j.jsx(je,{to:"Events"}),j.jsx(je,{to:"Products"}),j.jsx(je,{to:"Support"})]}),e&&j.jsxs(Og,{className:"flex flex-column gap-7 align-start",children:[j.jsxs("div",{className:"w-full flex align-center justify-between",children:[j.jsx(Iu,{}),j.jsx(xn,{icon:Mh,className:"icon",onClick:t})]}),j.jsxs("ul",{className:"flex flex-column gap-2 list-none",children:[j.jsx(je,{to:"About",mobile:!0}),j.jsx(je,{to:"Careers",mobile:!0}),j.jsx(je,{to:"Events",mobile:!0}),j.jsx(je,{to:"Products",mobile:!0}),j.jsx(je,{to:"Support",mobile:!0})]})]})]}),j.jsx(zg,{children:j.jsx("h1",{className:"uppercase ff-primary fw-regular white",children:"Immersive experiences that deliver"})})]})},Tg=ge.article`
   height: 500px;
 
   @media (width > 720px){
@@ -855,7 +855,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   overflow: hidden;
   margin-bottom: 50px;
 
-  background: url(${e=>e.image}) no-repeat center center/cover;
+  background: url(${e=>e["data-image"]}) no-repeat center center/cover;
 
   @media (width > 720px){
     width: 600px;
@@ -883,7 +883,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   @media (width > 1200px){
     bottom: 50px;
   }
-`,Rg=()=>j.jsxs(Tg,{className:"relative flex flex-column align-center",children:[j.jsx(Mg,{image:Vs("image-interactive")}),j.jsxs(Ag,{className:"flex flex-column gap-2",children:[j.jsx("h2",{className:"black ff-primary fw-regular fs-xl uppercase",children:"The leader in interactive VR"}),j.jsx("p",{className:"dark-gray ff-primary fw-bold fs-small",children:"Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand."})]})]}),Ig=ge.a`
+`,Rg=()=>j.jsxs(Tg,{className:"relative flex flex-column align-center",children:[j.jsx(Mg,{"data-image":Vs("image-interactive")}),j.jsxs(Ag,{className:"flex flex-column gap-2",children:[j.jsx("h2",{className:"black ff-primary fw-regular fs-xl uppercase",children:"The leader in interactive VR"}),j.jsx("p",{className:"dark-gray ff-primary fw-bold fs-small",children:"Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand."})]})]}),Ig=ge.a`
   width: 170px;
   padding: 10px 15px;
   border: 1px solid var(--color-black);
