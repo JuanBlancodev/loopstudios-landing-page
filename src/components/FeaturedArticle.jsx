@@ -19,7 +19,7 @@ const ImageContainer = styled.div`
   overflow: hidden;
   margin-bottom: 50px;
 
-  background: url(${props => props.image}) no-repeat center center/cover;
+  background: url(${props => props['data-image']}) no-repeat center center/cover;
 
   @media (width > 720px){
     width: 600px;
@@ -54,7 +54,7 @@ const InfoContainer = styled.div`
 const FeaturedArticle = () => {
   return (
     <Wrapper className='relative flex flex-column align-center'>
-      <ImageContainer image={getUrlImage('image-interactive')} />
+      <ImageContainer data-image={getUrlImage('image-interactive')} />
       <InfoContainer className="flex flex-column gap-2">
         <h2 className='black ff-primary fw-regular fs-xl uppercase'>The leader in interactive VR</h2>
         <p className='dark-gray ff-primary fw-bold fs-small'>
